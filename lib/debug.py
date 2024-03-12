@@ -22,3 +22,13 @@ accounting = Department.create("Accounting","Building J,2nd Floor Room 248A")
 print(accounting)
 
 ipdb.set_trace()
+hr.name = 'HR'
+hr.location = "Building F, 10th Floor"
+hr.update()
+print(hr)  # <Department 2: HR, Building F, 10th Floor>
+
+print("Delete Payroll")
+payroll.delete()  # delete from db table, object still exists in memory
+print(payroll)  # <Department 1: Payroll, Building A, 5th Floor>
+
+ipdb.set_trace()
